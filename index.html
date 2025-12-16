@@ -1,0 +1,714 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KICK OFF
+
+FOOTBALL Academy - Professional Training & Coaching</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#dc2626',
+                        secondary: '#1f2937'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(220,38,38,0.3) 100%);
+        }
+        .video-bg {
+            background: url('https://readdy.ai/api/search-image?query=professional%20football%20training%20session%20with%20young%20players%20practicing%20on%20grass%20field%2C%20coach%20instructing%2C%20dynamic%20action%20shots%2C%20modern%20sports%20facility%20background%2C%20cinematic%20lighting%2C%20high%20energy%20atmosphere%2C%20red%20and%20white%20team%20colors%20visible&width=1920&height=1080&seq=hero-video&orientation=landscape') center/cover;
+        }
+        .rotating-banner {
+            animation: slideUp 9s infinite;
+        }
+        @keyframes slideUp {
+            0%, 30% { transform: translateY(0); opacity: 1; }
+            33%, 63% { transform: translateY(-100%); opacity: 0; }
+            66%, 96% { transform: translateY(-200%); opacity: 0; }
+            100% { transform: translateY(-300%); opacity: 0; }
+        }
+        .custom-checkbox {
+            appearance: none;
+            width: 1.25rem;
+            height: 1.25rem;
+            border: 2px solid #dc2626;
+            border-radius: 4px;
+            position: relative;
+            cursor: pointer;
+        }
+        .custom-checkbox:checked {
+            background-color: #dc2626;
+        }
+        .custom-checkbox:checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .custom-radio {
+            appearance: none;
+            width: 1.25rem;
+            height: 1.25rem;
+            border: 2px solid #dc2626;
+            border-radius: 50%;
+            position: relative;
+            cursor: pointer;
+        }
+        .custom-radio:checked {
+            background-color: #dc2626;
+        }
+        .custom-radio:checked::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: white;
+            border-radius: 50%;
+        }
+        .custom-switch {
+            appearance: none;
+            width: 3rem;
+            height: 1.5rem;
+            background-color: #e5e7eb;
+            border-radius: 9999px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .custom-switch:checked {
+            background-color: #dc2626;
+        }
+        .custom-switch::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 1.25rem;
+            height: 1.25rem;
+            background-color: white;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        .custom-switch:checked::after {
+            transform: translateX(1.5rem);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+      <img src="https://i.postimg.cc/kXmzzD10/Facebook-profile-1-1.png" alt="ProHealth Logo" class="h-20 w-auto">
+
+</div>
+
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#" class="text-secondary hover:text-primary px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#" class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">About</a>
+                        <a href="#" class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">Courses</a>
+                        <a href="#" class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">Shop</a>
+                        <a href="#" class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">Blog</a>
+                        <a href="#" class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary">
+                        <i class="ri-menu-line ri-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#" class="text-secondary block px-3 py-2 text-base font-medium">Home</a>
+                <a href="#" class="text-gray-600 hover:text-primary block px-3 py-2 text-base font-medium">About</a>
+                <a href="#" class="text-gray-600 hover:text-primary block px-3 py-2 text-base font-medium">Courses</a>
+                <a href="#" class="text-gray-600 hover:text-primary block px-3 py-2 text-base font-medium">Shop</a>
+                <a href="#" class="text-gray-600 hover:text-primary block px-3 py-2 text-base font-medium">Blog</a>
+                <a href="#" class="text-gray-600 hover:text-primary block px-3 py-2 text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen video-bg flex items-center justify-center">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">KICK OFF
+
+FOOTBALL Training</h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90">Develop your skills with professional coaches and championship-level training programs</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <button class="bg-primary hover:bg-red-700 text-white px-8 py-4 !rounded-button text-lg font-semibold whitespace-nowrap transition-colors">Book Training</button>
+                <button class="border-2 border-white text-white hover:bg-white hover:text-secondary px-8 py-4 !rounded-button text-lg font-semibold whitespace-nowrap transition-colors">View Courses</button>
+            </div>
+            <div class="relative h-16 overflow-hidden">
+                <div class="rotating-banner">
+                    <div class="h-16 flex items-center justify-center">
+                        <span class="text-lg font-medium">Professional Coaching Excellence</span>
+                    </div>
+                    <div class="h-16 flex items-center justify-center">
+                        <span class="text-lg font-medium">All Ages Welcome - 6 to Adult</span>
+                    </div>
+                    <div class="h-16 flex items-center justify-center">
+                        <span class="text-lg font-medium">Championship Training Methods</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Booking Section -->
+    <section class="bg-primary py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-white mb-4">Book Your Training</h2>
+                <p class="text-xl text-red-100">Select your preferred date and course to get started</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-secondary mb-6">Training Calendar</h3>
+                    <div class="grid grid-cols-7 gap-2 mb-6">
+                        <div class="text-center font-semibold text-gray-600 py-2">Mon</div>
+                        <div class="text-center font-semibold text-gray-600 py-2">Tue</div>
+                        <div class="text-center font-semibold text-gray-600 py-2">Wed</div>
+                        <div class="text-center font-semibold text-gray-600 py-2">Thu</div>
+                        <div class="text-center font-semibold text-gray-600 py-2">Fri</div>
+                        <div class="text-center font-semibold text-gray-600 py-2">Sat</div>
+                        <div class="text-center font-semibold text-gray-600 py-2">Sun</div>
+                        <div class="text-center py-3 text-gray-400">28</div>
+                        <div class="text-center py-3 text-gray-400">29</div>
+                        <div class="text-center py-3 text-gray-400">30</div>
+                        <div class="text-center py-3 text-gray-400">31</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">1</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">2</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">3</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">4</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">5</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">6</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">7</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">8</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">9</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">10</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">11</div>
+                        <div class="text-center py-3 bg-primary text-white rounded cursor-pointer">12</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">13</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">14</div>
+                        <div class="text-center py-3 bg-primary text-white rounded cursor-pointer">15</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">16</div>
+                        <div class="text-center py-3 bg-primary text-white rounded cursor-pointer">17</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">18</div>
+                        <div class="text-center py-3 bg-primary text-white rounded cursor-pointer">19</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">20</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">21</div>
+                        <div class="text-center py-3 bg-primary text-white rounded cursor-pointer">22</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">23</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">24</div>
+                        <div class="text-center py-3 bg-primary text-white rounded cursor-pointer">26</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">27</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">28</div>
+                        <div class="text-center py-3 bg-primary text-white rounded cursor-pointer">29</div>
+                        <div class="text-center py-3 cursor-pointer hover:bg-gray-100 rounded">30</div>
+                    </div>
+                    <div class="flex items-center gap-4 text-sm">
+                        <div class="flex items-center gap-2">
+                            <div class="w-4 h-4 bg-primary rounded"></div>
+                            <span>Available Sessions</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-4 h-4 bg-gray-200 rounded"></div>
+                            <span>No Sessions</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-secondary mb-6">Booking Form</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Course Type</label>
+                            <div class="relative">
+                                <button type="button" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 text-left flex items-center justify-between">
+                                    <span>Select a course</span>
+                                    <div class="w-5 h-5 flex items-center justify-center">
+                                        <i class="ri-arrow-down-s-line"></i>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Player Name</label>
+                            <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Age</label>
+                            <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Contact Email</label>
+                            <input type="email" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">WhatsApp Number</label>
+                            <input type="tel" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary">
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <input type="checkbox" class="custom-checkbox">
+                            <label class="text-sm text-gray-600">I agree to the terms and conditions</label>
+                        </div>
+                        <button type="submit" class="w-full bg-secondary hover:bg-gray-800 text-white py-4 !rounded-button font-semibold whitespace-nowrap transition-colors">Book Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-secondary mb-4">Our Training Programs</h2>
+                <p class="text-xl text-gray-600">Professional coaching for every age and skill level</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="h-48" style="background-image: url('https://readdy.ai/api/search-image?query=young%20children%20football%20training%20session%20with%20coach%2C%20kids%20aged%206-16%20practicing%20ball%20skills%20on%20grass%20field%2C%20colorful%20training%20cones%2C%20happy%20energetic%20atmosphere%2C%20professional%20sports%20coaching%20environment&width=400&height=300&seq=youth-training&orientation=landscape'); background-size: cover; background-position: center;"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-3">Youth Training</h3>
+                        <p class="text-gray-600 mb-4">Ages 6-16 • Skill development, teamwork, and fun in a supportive environment</p>
+                        <div class="text-2xl font-bold text-primary mb-4">£25/session</div>
+                        <button class="w-full bg-primary hover:bg-red-700 text-white py-3 !rounded-button font-semibold whitespace-nowrap transition-colors">Learn More</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="h-48" style="background-image: url('https://readdy.ai/api/search-image?query=adult%20football%20training%20session%20with%20professional%20coach%2C%20players%20aged%2016%20and%20above%20practicing%20advanced%20techniques%2C%20competitive%20training%20environment%2C%20modern%20football%20facility%20with%20quality%20equipment&width=400&height=300&seq=adult-training&orientation=landscape'); background-size: cover; background-position: center;"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-3">Adult Sessions</h3>
+                        <p class="text-gray-600 mb-4">Ages 16+ • Advanced techniques, fitness, and competitive play</p>
+                        <div class="text-2xl font-bold text-primary mb-4">£35/session</div>
+                        <button class="w-full bg-primary hover:bg-red-700 text-white py-3 !rounded-button font-semibold whitespace-nowrap transition-colors">Learn More</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="h-48" style="background-image: url('https://readdy.ai/api/search-image?query=online%20football%20coaching%20digital%20course%20setup%20with%20laptop%20computer%2C%20virtual%20training%20session%2C%20modern%20technology%20for%20remote%20football%20education%2C%20professional%20online%20learning%20environment%20with%20football%20graphics&width=400&height=300&seq=online-courses&orientation=landscape'); background-size: cover; background-position: center;"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-3">Online Courses</h3>
+                        <p class="text-gray-600 mb-4">Coming Soon • Digital coaching programs and tactical analysis</p>
+                        <div class="text-2xl font-bold text-gray-400 mb-4">£15/month</div>
+                        <button class="w-full bg-gray-300 text-gray-500 py-3 !rounded-button font-semibold whitespace-nowrap cursor-not-allowed">Coming Soon</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="h-48 rounded-lg" style="background-image: url('https://readdy.ai/api/search-image?query=professional%20football%20coach%20with%20UEFA%20qualifications%20instructing%20young%20players%2C%20experienced%20trainer%20with%20whistle%20and%20clipboard%2C%20modern%20football%20academy%20training%20ground%2C%20authoritative%20coaching%20presence&width=300&height=300&seq=coach-1&orientation=squarish'); background-size: cover; background-position: center;"></div>
+                    <div class="h-48 rounded-lg" style="background-image: url('https://readdy.ai/api/search-image?query=state%20of%20the%20art%20football%20training%20facility%20with%20artificial%20grass%20pitches%2C%20modern%20goal%20posts%2C%20training%20equipment%2C%20professional%20academy%20infrastructure%2C%20well%20maintained%20sports%20complex&width=300&height=300&seq=facility-1&orientation=squarish'); background-size: cover; background-position: center;"></div>
+                    <div class="h-48 rounded-lg" style="background-image: url('https://readdy.ai/api/search-image?query=group%20of%20diverse%20young%20football%20players%20celebrating%20success%2C%20team%20spirit%20and%20achievement%2C%20happy%20children%20with%20football%20trophies%20and%20medals%2C%20academy%20success%20story%20moment&width=300&height=300&seq=success-1&orientation=squarish'); background-size: cover; background-position: center;"></div>
+                    <div class="h-48 rounded-lg" style="background-image: url('https://readdy.ai/api/search-image?query=professional%20football%20training%20equipment%20including%20cones%2C%20balls%2C%20goals%2C%20and%20coaching%20materials%2C%20organized%20sports%20gear%20at%20modern%20academy%20facility%2C%20quality%20training%20resources&width=300&height=300&seq=equipment-1&orientation=squarish'); background-size: cover; background-position: center;"></div>
+                </div>
+                <div>
+                    <h2 class="text-4xl font-bold text-secondary mb-6">About KICK OFF
+
+FOOTBALL Academy</h2>
+                    <p class="text-lg text-gray-600 mb-6">Founded with a passion for developing football talent at every level, KICK OFF
+
+FOOTBALL Academy combines professional coaching expertise with a nurturing environment that helps players reach their full potential.</p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 flex items-center justify-center text-primary">
+                                <i class="ri-check-line ri-lg"></i>
+                            </div>
+                            <span class="text-gray-700">UEFA qualified coaches with 15+ years experience</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 flex items-center justify-center text-primary">
+                                <i class="ri-check-line ri-lg"></i>
+                            </div>
+                            <span class="text-gray-700">State-of-the-art training facilities and equipment</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 flex items-center justify-center text-primary">
+                                <i class="ri-check-line ri-lg"></i>
+                            </div>
+                            <span class="text-gray-700">Over 200 successful academy graduates</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 flex items-center justify-center text-primary">
+                                <i class="ri-check-line ri-lg"></i>
+                            </div>
+                            <span class="text-gray-700">Pathway to professional and semi-professional clubs</span>
+                        </div>
+                    </div>
+                    <button class="bg-primary hover:bg-red-700 text-white px-8 py-4 !rounded-button font-semibold whitespace-nowrap transition-colors">Learn More About Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-black-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-secondary mb-4">What Our Players Say</h2>
+                <p class="text-xl text-gray-600">Success stories from our academy community</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full mr-4" style="background-image: url('https://readdy.ai/api/search-image?query=portrait%20of%20happy%20teenage%20football%20player%20smiling%2C%20confident%20young%20athlete%20in%20red%20and%20white%20football%20kit%2C%20successful%20academy%20graduate%2C%20professional%20headshot%20style&width=100&height=100&seq=testimonial-1&orientation=squarish'); background-size: cover; background-position: center;"></div>
+                        <div>
+                            <div class="font-semibold text-secondary">Marcus Johnson</div>
+                            <div class="text-sm text-gray-600">Age 16, Academy Graduate</div>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="text-gray-600">"The coaching here is incredible. I've improved so much in just 6 months and now I'm playing for the county team. The coaches really care about each player's development."</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full mr-4" style="background-image: url('https://readdy.ai/api/search-image?query=portrait%20of%20proud%20parent%20with%20child%20football%20player%2C%20happy%20family%20moment%20at%20football%20academy%2C%20supportive%20mother%20or%20father%20smiling%2C%20professional%20family%20photo%20style&width=100&height=100&seq=testimonial-2&orientation=squarish'); background-size: cover; background-position: center;"></div>
+                        <div>
+                            <div class="font-semibold text-secondary">Sarah Williams</div>
+                            <div class="text-sm text-gray-600">Parent of Academy Player</div>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="text-gray-600">"My daughter loves coming to training every week. The coaches are professional, friendly, and have helped her confidence grow both on and off the pitch."</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full mr-4" style="background-image: url('https://readdy.ai/api/search-image?query=portrait%20of%20adult%20football%20player%20in%20training%20gear%2C%20mature%20athlete%20who%20joined%20academy%20as%20adult%2C%20confident%20experienced%20player%20smiling%2C%20professional%20sports%20portrait&width=100&height=100&seq=testimonial-3&orientation=squarish'); background-size: cover; background-position: center;"></div>
+                        <div>
+                            <div class="font-semibold text-secondary">James Mitchell</div>
+                            <div class="text-sm text-gray-600">Adult Training Program</div>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="text-gray-600">"I joined as a complete beginner at 28 and now I'm playing in a local league. The adult sessions are perfectly structured and the community is fantastic."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Merchandise Shop -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-secondary mb-4">Academy Shop</h2>
+                <p class="text-xl text-gray-600">Official merchandise and training equipment</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div class="relative h-48" style="background-image: url('https://readdy.ai/api/search-image?query=red%20and%20white%20football%20training%20kit%20jersey%20with%20academy%20logo%2C%20professional%20sports%20apparel%2C%20high%20quality%20football%20shirt%20on%20clean%20white%20background%2C%20modern%20athletic%20wear%20design&width=300&height=300&seq=product-1&orientation=squarish'); background-size: cover; background-position: center;">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity flex items-center justify-center">
+                            <button class="bg-primary text-white px-4 py-2 !rounded-button opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Quick Add</button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-secondary mb-2">Training Jersey</h3>
+                        <div class="text-lg font-bold text-primary mb-3">£29.99</div>
+                        <button class="w-full bg-primary hover:bg-red-700 text-white py-2 !rounded-button text-sm whitespace-nowrap transition-colors">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div class="relative h-48" style="background-image: url('https://readdy.ai/api/search-image?query=professional%20football%20soccer%20ball%20with%20academy%20branding%2C%20high%20quality%20leather%20football%20on%20clean%20white%20background%2C%20official%20match%20ball%20with%20red%20and%20white%20design%20elements&width=300&height=300&seq=product-2&orientation=squarish'); background-size: cover; background-position: center;">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity flex items-center justify-center">
+                            <button class="bg-primary text-white px-4 py-2 !rounded-button opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Quick Add</button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-secondary mb-2">Academy Football</h3>
+                        <div class="text-lg font-bold text-primary mb-3">£24.99</div>
+                        <button class="w-full bg-primary hover:bg-red-700 text-white py-2 !rounded-button text-sm whitespace-nowrap transition-colors">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div class="relative h-48" style="background-image: url('https://readdy.ai/api/search-image?query=red%20and%20white%20football%20training%20shorts%20with%20academy%20logo%2C%20professional%20athletic%20shorts%20for%20football%20training%2C%20high%20quality%20sportswear%20on%20clean%20white%20background&width=300&height=300&seq=product-3&orientation=squarish'); background-size: cover; background-position: center;">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity flex items-center justify-center">
+                            <button class="bg-primary text-white px-4 py-2 !rounded-button opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Quick Add</button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-secondary mb-2">Training Shorts</h3>
+                        <div class="text-lg font-bold text-primary mb-3">£19.99</div>
+                        <button class="w-full bg-primary hover:bg-red-700 text-white py-2 !rounded-button text-sm whitespace-nowrap transition-colors">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div class="relative h-48" style="background-image: url('https://readdy.ai/api/search-image?query=football%20training%20accessories%20kit%20including%20water%20bottle%2C%20shin%20guards%2C%20and%20equipment%20bag%20with%20academy%20branding%2C%20professional%20sports%20accessories%20on%20clean%20white%20background&width=300&height=300&seq=product-4&orientation=squarish'); background-size: cover; background-position: center;">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity flex items-center justify-center">
+                            <button class="bg-primary text-white px-4 py-2 !rounded-button opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Quick Add</button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-secondary mb-2">Training Kit</h3>
+                        <div class="text-lg font-bold text-primary mb-3">£39.99</div>
+                        <button class="w-full bg-primary hover:bg-red-700 text-white py-2 !rounded-button text-sm whitespace-nowrap transition-colors">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <button class="bg-secondary hover:bg-gray-800 text-white px-8 py-4 !rounded-button font-semibold whitespace-nowrap transition-colors">View All Products</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-secondary mb-4">Latest News & Insights</h2>
+                <p class="text-xl text-gray-600">Match reports, coaching tips, and football insights</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="h-48" style="background-image: url('https://readdy.ai/api/search-image?query=football%20match%20action%20shot%20with%20young%20players%20competing%2C%20exciting%20game%20moment%20during%20academy%20tournament%2C%20dynamic%20sports%20photography%20with%20players%20in%20red%20and%20white%20kits&width=400&height=300&seq=blog-1&orientation=landscape'); background-size: cover; background-position: center;"></div>
+                    <div class="p-6">
+                        <div class="text-sm text-primary font-semibold mb-2">Match Report</div>
+                        <h3 class="text-xl font-bold text-secondary mb-3">Academy U16s Win County Championship</h3>
+                        <p class="text-gray-600 mb-4">Our U16 team delivered an outstanding performance to claim the county championship title with a thrilling 3-2 victory...</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">November 10, 2024</span>
+                            <a href="#" class="text-primary hover:text-red-700 font-semibold">Read More</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="h-48" style="background-image: url('https://readdy.ai/api/search-image?query=football%20coach%20demonstrating%20passing%20technique%20to%20young%20players%2C%20educational%20coaching%20moment%2C%20professional%20instruction%20on%20grass%20training%20field%20with%20cones%20and%20equipment&width=400&height=300&seq=blog-2&orientation=landscape'); background-size: cover; background-position: center;"></div>
+                    <div class="p-6">
+                        <div class="text-sm text-primary font-semibold mb-2">Coaching Tips</div>
+                        <h3 class="text-xl font-bold text-secondary mb-3">5 Essential Passing Techniques Every Player Should Master</h3>
+                        <p class="text-gray-600 mb-4">Discover the fundamental passing skills that form the foundation of excellent football play, from basic accuracy to advanced...</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">November 8, 2024</span>
+                            <a href="#" class="text-primary hover:text-red-700 font-semibold">Read More</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="h-48" style="background-image: url('https://readdy.ai/api/search-image?query=football%20academy%20success%20story%20with%20player%20signing%20professional%20contract%2C%20celebration%20moment%20with%20academy%20coaches%20and%20family%2C%20achievement%20and%20pathway%20to%20professional%20football&width=400&height=300&seq=blog-3&orientation=landscape'); background-size: cover; background-position: center;"></div>
+                    <div class="p-6">
+                        <div class="text-sm text-primary font-semibold mb-2">Success Story</div>
+                        <h3 class="text-xl font-bold text-secondary mb-3">Former Academy Player Signs Professional Contract</h3>
+                        <p class="text-gray-600 mb-4">We're proud to announce that academy graduate Tom Harrison has signed his first professional contract with...</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">November 5, 2024</span>
+                            <a href="#" class="text-primary hover:text-red-700 font-semibold">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="text-center mt-8">
+                <button class="bg-primary hover:bg-red-700 text-white px-8 py-4 !rounded-button font-semibold whitespace-nowrap transition-colors">View All Articles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                      <div class="flex items-center">
+      <img src="https://i.postimg.cc/nLJXQ40v/Facebook-profile-1.png" alt="ProHealth Logo" class="h-20 w-auto">
+
+</div>
+
+
+
+
+                    <p class="text-gray-300 mb-6">Developing football talent through professional coaching and championship-level training programs.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition-colors">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition-colors">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition-colors">
+                            <i class="ri-youtube-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Training Programs</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Book a Session</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Academy Shop</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">News & Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Programs</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Youth Training (6-16)</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Adult Sessions (16+)</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Online Courses</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Private Coaching</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Team Training</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Holiday Camps</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span class="text-gray-300">123 Football Lane, Manchester M1 2AB</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span class="text-gray-300">+44 161 123 4567</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span class="text-gray-300">info@elitefootballacademy.co.uk</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary">
+                                <i class="ri-whatsapp-line"></i>
+                            </div>
+                            <span class="text-gray-300">+44 7700 123456</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 KICK OFF
+
+FOOTBALL Academy. All rights reserved. | Privacy Policy | Terms & Conditions</p>
+            </div>
+        </div>
+    </footer>
+
+    <script id="mobile-menu-toggle">
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+    <script id="calendar-interaction">
+        document.addEventListener('DOMContentLoaded', function() {
+            const calendarDates = document.querySelectorAll('.text-center.py-3.cursor-pointer');
+            
+            calendarDates.forEach(date => {
+                date.addEventListener('click', function() {
+                    calendarDates.forEach(d => d.classList.remove('bg-blue-500', 'text-white'));
+                    if (!this.classList.contains('bg-primary')) {
+                        this.classList.add('bg-blue-500', 'text-white');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script id="form-interactions">
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkboxes = document.querySelectorAll('.custom-checkbox');
+            const radios = document.querySelectorAll('.custom-radio');
+            const switches = document.querySelectorAll('.custom-switch');
+            
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    console.log('Checkbox changed:', this.checked);
+                });
+            });
+            
+            radios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    console.log('Radio changed:', this.value);
+                });
+            });
+            
+            switches.forEach(switchEl => {
+                switchEl.addEventListener('change', function() {
+                    console.log('Switch changed:', this.checked);
+                });
+            });
+        });
+    </script>
+
+
+
+</body>
+</html>
